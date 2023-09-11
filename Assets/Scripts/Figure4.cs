@@ -1,16 +1,13 @@
 using UnityEngine;
 
-public class Figure4 : MonoBehaviour
+public class Figure4 : RotatingFigure
 {
-    [SerializeField] private float _rotateSpeed;
     [SerializeField] private float _moveSpeed;
 
-    private Vector3 _rotationDirection;
     private Vector3 _moveDirection;
 
-    private void Awake()
+    private void Start()
     {
-        _rotationDirection = Vector3.up;
         _moveDirection = Vector3.forward;
     }
 

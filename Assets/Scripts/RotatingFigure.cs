@@ -2,17 +2,17 @@ using UnityEngine;
 
 public class RotatingFigure : MonoBehaviour
 {
-    [SerializeField] private float _rotateSpeed;
+    [SerializeField] protected float _rotateSpeed;
 
-    private Vector3 _rotation;
+    protected Vector3 _rotationDirection;
 
     private void Awake()
     {
-        _rotation = Vector3.up;
+        _rotationDirection = Vector3.up;
     }
 
     private void Update()
     {
-        transform.Rotate(_rotation * _rotateSpeed * Time.deltaTime);
+        transform.Rotate(_rotationDirection * _rotateSpeed * Time.deltaTime);
     }
 }
